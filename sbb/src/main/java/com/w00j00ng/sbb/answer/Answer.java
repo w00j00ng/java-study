@@ -1,6 +1,7 @@
 package com.w00j00ng.sbb.answer;
 
 import com.w00j00ng.sbb.question.Question;
+import com.w00j00ng.sbb.user.SiteUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,4 +28,7 @@ public class Answer {
 
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }
